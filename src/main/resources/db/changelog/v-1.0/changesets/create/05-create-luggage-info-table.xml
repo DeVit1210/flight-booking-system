@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="create-luggage-info-table" author="Mozol Denis">
+        <createTable tableName="luggage_info">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="allowed_on_flight" type="bool">
+                <constraints nullable="false"/>
+            </column>
+            <column name="max_luggage_weight" type="int"/>
+            <column name="additional_luggage_cost" type="decimal(10,2)"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="luggage_info"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

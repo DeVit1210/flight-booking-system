@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <include file="changesets/create/01-create-admin-table.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/create/02-create-authorization-data-table.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/create/03-create-airport-table.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/create/04-create-flight-table.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/create/05-create-luggage-info-table.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/create/06-create-orders-table.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/create/07-create-passengers-data-table.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/create/08-create-planes-table.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/create/09-create-reservations-table.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/create/10-create-routes-table.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/create/11-create-route-subscriptions-table.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/create/12-create-tickets-table.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/create/13-create-tours-table.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/create/14-create-transfers-table.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/create/15-create-users-table.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/fk/01-fk-admins-authorization-data.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/fk/02-fk-flights-transfers.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/fk/03-fk-orders-users.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/fk/04-fk-passengers-data-tickets.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/fk/05-fk-reservations-users.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/fk/06-fk-reservations-tours.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/fk/07-fk-route-departure-airport.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/fk/08-fk-routes-arrival-airport.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/fk/09-fk-route-subscriptions-users.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/fk/10-fk-route-subscriptions-routes.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/fk/11-fk-tickets-flights.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/fk/12-fk-tickets-orders.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/fk/13-fk-transfers-routes.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/fk/14-fk-transfers-planes.xml" relativeToChangelogFile="true"/>
+    <include file="changesets/fk/15-fk-users-authorization-data.xml" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>
